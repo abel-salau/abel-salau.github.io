@@ -494,7 +494,7 @@ padding: 1rem;
     }
 
     .timeline .date::before{
-        left: -20rem;
+        left: -19rem;
     }
 
     .timeline .date::after{
