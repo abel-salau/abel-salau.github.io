@@ -361,7 +361,7 @@ padding: 1rem;
 /*Start timeline*/
 .timeline ul{
     border-left: 4px solid #B5EECB;
-    border-radius: .9rem;
+    border-radius: .8rem;
     background-color:rgba(0, 0, 0, 0.123) ;
     margin: 0 auto;
     position: relative;
@@ -405,7 +405,7 @@ padding: 1rem;
     content: attr(data-date);
     left: -21rem;
     text-align:right;
-    min-width: 12 rem;
+    min-width: 12rem;
     font-size: 1.5rem;
 }
 
@@ -413,7 +413,7 @@ padding: 1rem;
     content: '';
     box-shadow: 0 0 0 4px whitesmoke;
     border-radius: 100%;
-    left: -8rem;
+    left: -6.2rem;
     height: 1.5rem;
     width: 1.5rem;
     background-color: #2d3361;
