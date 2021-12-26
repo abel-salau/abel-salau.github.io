@@ -13,8 +13,15 @@ html{
 body {
     width: 100%;
     height:100%;
-    background: url("images/sitebg.jpg") no-repeat center fixed;
+    background: url("images/port-bg.png") no-repeat center fixed;
     background-size: cover;
+}
+#vanta-bg {
+    position:fixed;
+    width: 100%;
+    height: 100vh;
+
+
 }
 section{
     padding: 6rem 0;
@@ -107,7 +114,7 @@ height: 100vh;
     height: 100vh;
     position: fixed;
     top: -100vh;
-    background-color: #16162d;
+    background-color: #262B52;
     border-bottom-right-radius: 100%;
     border-bottom-left-radius: 100%;
     transition: all 650ms cubic-bezier(1,0,0,1) ;
@@ -135,7 +142,7 @@ padding: 1rem;
 
 .nav-link:hover,
 .nav-link:focus{
-    background: linear-gradient(to top, #ffe838, #fd57bf);
+    background: linear-gradient(to top, #B5EECB, #2d3361);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -171,7 +178,7 @@ padding: 1rem;
 }
 
 .bar{
-    background: linear-gradient(to right, #ffe838, #fd57bf);
+    background: linear-gradient(to right, #B5EECB, #2d3361);
     width: 100%;
     height: 3px;
     border-radius: .8rem;
@@ -212,7 +219,7 @@ padding: 1rem;
 .landing-text h1{
     font-size: 10rem;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: linear-gradient(to top, #ffe838, #fd57bf);
+    background: linear-gradient(to top, #B5EECB, white);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -268,31 +275,42 @@ padding: 1rem;
 }
 
 .social-media i{
+    padding-top: 20px;
+    padding-right: 10px;
     font-size: 5rem;
-    transition: color 650ms;
+    /* transition: filter ; */
+    transition: all 650ms; 
 
 }
 
-.fa-facebook-square:hover{
-    color: #4267b2;
+.fa-linkedin:hover{
+    color: #0077b5;
+   
 
 }
 
-.fa-twitter-square:hover{
-    color: #38a1f3;
+.fa-github-square:hover{
+    filter: invert(70%);
 
 }
 
-.fa-dribbble-square:hover{
-    color: #ea4c89;
+.fa-envelope-open:hover{
+    color: rgb(255, 203, 238);
+
+} 
+
+.fa-file-pdf:hover{
+    color: red;
 
 }
+
 /*End about*/
 
-/*Start services*/
-/*End services*/
-
 /*Start portfolio*/
+.section-heading{
+    padding-bottom: 15px;
+
+}
 .portfolio-item{
     display: flex;
     align-items: center;
@@ -342,9 +360,9 @@ padding: 1rem;
 
 /*Start timeline*/
 .timeline ul{
-    border-left: 4px solid #ffe838;
-    border-radius: .8rem;
-    background-color:rgba(0, 0, 0, 0.05) ;
+    border-left: 4px solid #B5EECB;
+    border-radius: .9rem;
+    background-color:rgba(0, 0, 0, 0.123) ;
     margin: 0 auto;
     position: relative;
     padding: 5rem;
@@ -356,9 +374,10 @@ padding: 1rem;
 .timeline h1{
     font-size: 2rem;
     text-transform: uppercase;
-    font-weight:300;
+    font-weight:400;
     margin-bottom: 1rem;
-    opacity: .3;
+    color: #B5EECB;
+    /* opacity: .3; */
 }
 
 .timeline .date{
@@ -392,12 +411,12 @@ padding: 1rem;
 
 .timeline .date::after{
     content: '';
-    box-shadow: 0 0 0 4px #fd57bf;
+    box-shadow: 0 0 0 4px whitesmoke;
     border-radius: 100%;
     left: -8rem;
     height: 1.5rem;
     width: 1.5rem;
-    background-color: #313534;
+    background-color: #2d3361;
 }
 
 /*End timeline*/
@@ -426,7 +445,15 @@ padding: 1rem;
 /*Start media queries*/
 @media screen and (max-width: 768px) {
     body{
-        background: url("images/sitebg2.jpg") no-repeat center fixed;
+        background: url("images/port-bg2.png") no-repeat center fixed;
+    }
+
+    #vanta-bg {
+        position:fixed;
+        width: 100%;
+        height: 100vh;
+    
+    
     }
     .landing-text h1{
         font-size: 15rem;
@@ -493,8 +520,36 @@ padding: 1rem;
     }
 
     .about .container{
-        
+        flex-direction: column;
     }
     
+    .profile-img{
+        margin: 0 0 7rem 0;
+    }
+
+    .portfolio-item {
+        flex-direction: column;
+    }
+
+    .portfolio-img{
+        margin: 0 0 2rem 0;
+        order: 1;
+    }
+
+    .portfolio-description {
+        margin: 0;
+        order: 2;
+    }
+
+    .timeline ul{
+        font-size: 1.6rem;
+    }
+
+    .timeline .date::before{
+        font-size: 1.4rem;
+    }
+
+
+
 }
 /*End media queries*/
