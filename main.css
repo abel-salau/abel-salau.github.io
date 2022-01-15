@@ -20,9 +20,8 @@ body {
     position:fixed;
     width: 100%;
     height: 100vh;
-
-
 }
+
 section{
     padding: 6rem 0;
 }
@@ -152,7 +151,7 @@ padding: 1rem;
 .top-nav.open{
     top: 0;
     border-radius: initial;
-    z-index: 80;
+    z-index: 100;
 }
 
 .menu-toggler{
@@ -165,7 +164,7 @@ padding: 1rem;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    z-index: 90;
+    z-index: 101;
     transition: transform 650ms ease-out;
 }
 
@@ -213,7 +212,7 @@ padding: 1rem;
     transform: translate(-50%, -50%);
     width: 100%;
     text-align: center;
-    z-index: 1;
+    z-index: 0;
 }
 
 .landing-text h1{
@@ -265,6 +264,8 @@ padding: 1rem;
 .profile-img{ 
     flex: 1;
     margin-right: 5rem ;
+    width: 100px;
+    height: auto;
 }
 .about-details {
     flex: 1;
@@ -322,6 +323,40 @@ padding: 1rem;
 .portfolio-item:last-child{
     margin-bottom: 0;
 }
+
+/* (A) WRAPPER */
+.hoverwrap {
+    position: relative;
+
+  }
+  
+  /* (B) RESPONSIVE IMAGE */
+  .hoverwrap img { width: 100%; }
+  
+  /* (C) CAPTION */
+  .hovercap {
+    /* (C1) DIMENSIONS */
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    /* (C2) BOTTOM */
+    position: absolute;
+    bottom: 0;
+    /* (C3) COLORS */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  
+  /* (D) SHOW/HIDE */
+  .hovercap {
+    visibility: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .hoverwrap:hover .hovercap {
+    visibility: visible;
+    opacity: 1;
+  }
 
 .profile-img{
     flex: 1;
@@ -425,18 +460,49 @@ padding: 1rem;
 /*End contact*/
 
 /*Start footer*/
+.copyright{
+    width: 100%;
+    text-align: center;
+    background-color: #B5EECB;
+    padding: 2rem 0;
+    position: relative;
+    color: #2d3361;
+}
+
+.up{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: #eee;
+    top: -2.5rem;
+    right: 5rem;
+    border-radius: 100%;
+    display: flex;
+    animation: pulse 2s infinite;
+    cursor: pointer;
+}
+
+.up i{
+    color: #2d3361;
+    font-size: 2rem;
+    margin: auto;
+
+}
+.copyright p{
+    font-size: 1.4rem;
+}
 /*End footer*/
 
 /*Start animations*/
 @keyframes pulse {
     0%{
-        box-shadow: 0 0 0 0 rgba(253, 87, 191, 0.99);
+        box-shadow: 0 0 0 0 #b5eecbc4;
     }
     70%{
-        box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0);
+        box-shadow: 0 0 0 2rem #b5eecb69;
     }
     100%{
-        box-shadow: 0 0 0 0 rgba(253, 87, 191, 0.99);
+        box-shadow: 0 0 0 0 #b5eecb52;
     }
     
 }
@@ -482,7 +548,7 @@ padding: 1rem;
     }
 
     .about-details .nav-list{
-        flex-direction: initial;
+        flex-direction: column;
     }
 
     .about-details li{
